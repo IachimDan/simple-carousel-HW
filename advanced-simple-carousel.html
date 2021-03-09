@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Two stage carousel | Advanced CSS Selectors</title>
+        <style>
+            body {
+                background-color: #234;
+            }
+            .carousel{
+                width: 840px;
+                
+
+                /* NEW - center a block HORIZONTALY */
+                margin-top: 50px;
+                margin-left: auto;
+                margin-right: auto;
+
+                overflow: hidden; /* ceea ce este inafara */
+                box-shadow: 0 0 10px 2px #111;
+            }
+            .carousel .slide{
+                width: 1800px;
+                transition: 1s;
+            }
+            .carousel .controls{
+                text-align: center;
+            }
+            .carousel .controls a{
+                color: white;
+                text-decoration: none;
+            }
+            .carousel #left:target .slide{
+                transform: translateX(0px);
+            }
+            .carousel #right:target .slide{
+                transform: translateX(-840px);
+            }
+            a{
+                padding: 20px;
+                font-size: 30px;
+            }
+            a:hover{
+                background-color: rgb(66, 98, 134);
+                text-shadow: 0px 4px 3px rgb(32, 32, 32);
+                transition: 0.5s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carousel">
+                <div id="left">
+                    <div id="right">
+                        <div class="slide">
+                            <img src="https://i.picsum.photos/id/77/280/400.jpg?hmac=s0G6C_rX2eDEqgSYm6998H_1AhFqM5qZyPdq2evGr0o" alt="">
+                            <img src="https://i.picsum.photos/id/237/280/400.jpg?hmac=z-do4RdUz88BhmquHpprFETz0fM__aBMyPSCKQTPahw" alt="">
+                            <img src="https://i.picsum.photos/id/619/280/400.jpg?hmac=FHg2RF39f-OWJh2r44c8_rl8E9V6PSMKRV7SJA9yizw" alt="">
+                            <img src="https://i.picsum.photos/id/558/280/400.jpg?hmac=JRfXX5aCRkRxGADuLqCoOtDiCVONRzFZ-Ux9yamu_gs" alt="">
+                            <img src="https://i.picsum.photos/id/145/280/400.jpg?hmac=8TWHsP5TriXPpFgW7GTDpvwVtyAF3pXgyTUS_Nc8TWI" alt="">
+                            <img src="https://i.picsum.photos/id/410/280/400.jpg?hmac=XkdhlazWpCGyXll7BJ0wPYJx1ifk6quP6sa-0ivGi6U" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <!--HW1:
+                    left/right -> symbols / arrow + color + efect
+                        HW2: what if 9 pictures?
+                        [123|456|789]
+                        controls: [1] [2] [3]
+                    -->
+                    <a href="#left">⇦</a>
+                    <a href="#right">⇨</a>
+                </div>
+        </div>
+
+    </body>
+</html>
